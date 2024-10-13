@@ -1,5 +1,9 @@
+resource "random_pet" "this" {
+  length = 2
+}
+
 resource "equinix_network_device" "c8kv" {
-  name              = "vd-${var.metro_code}-${var.username}"
+  name              = "C8K-${random_pet.this.id}"
   metro_code        = var.metro_code
   type_code         = var.type_code
   self_managed      = true
