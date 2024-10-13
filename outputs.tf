@@ -15,3 +15,12 @@ output "pass" {
   sensitive = true
 }
 
+output "random_name" {
+  value = random_pet.this.id
+  sensitive = true
+}
+
+output "device_name" {
+  value = equinix_network_device.c8kv.name
+  sensitive = true
+}
