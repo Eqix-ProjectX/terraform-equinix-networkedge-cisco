@@ -12,6 +12,7 @@ resource "equinix_network_device" "c8kv" {
   notifications     = var.notifications
   hostname          = "vd-${var.metro_code}-${var.username}"
   term_length       = 12
+  interface_count   = 24
   account_number    = var.account_number
   version           = var.sw_version
   core_count        = var.core_count
